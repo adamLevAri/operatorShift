@@ -2,8 +2,6 @@
 
 Operator overload program:
 
-Detect and Resolve a Linear & Polinom functions
-*solve(LINE)
-*solve(POLI)
+Detect and Resolve a Linear & Polinom functions.
 
 Also Overload arithmatic operations: +,-,*,/,^
