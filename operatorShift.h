@@ -26,14 +26,12 @@ POLI operator ^ (LINE A, int e){
     return R;
 }
 
-LINE operator + (LINE A, LINE B){//assumes that A.x == 0 or B.x == 0 or A.x == B.x
+LINE operator + (LINE A, LINE B){
     LINE R;
     R.b = A.b + B.b;
     R.a = A.a + B.a;
     if(A.x) R.x = A.x;
     else R.x = B.x;
-    //if(A.c) R.c = A.c;
-    //else if(B.c) R.c = B.c;
     return R;
 }
 
@@ -66,7 +64,7 @@ POLI operator - (POLI A, LINE B){
     return R;
 }
 
-LINE operator * (LINE A, LINE B){//assumes that A.x == 0 or B.x == 0
+LINE operator * (LINE A, LINE B){
     LINE R;
     R.b = A.b * B.b;
     R.a = A.a * B.b + B.a * A.b;
@@ -75,7 +73,7 @@ LINE operator * (LINE A, LINE B){//assumes that A.x == 0 or B.x == 0
     return R;
 }
 
-LINE operator / (LINE A, LINE B){//assumes that B.x == 0
+LINE operator / (LINE A, LINE B){
     LINE R;
     R.b = A.b / B.b;
     R.a = A.a / B.b;
@@ -101,11 +99,6 @@ ostream &operator << (ostream &output, const VAR &A) {
     else
         throw "Error";
    return output;
-}
-
-string cast(POLI x) {
-    
-    return "";
 }
 
 int solve(POLI x){return (int)x.x->i;}
