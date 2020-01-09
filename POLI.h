@@ -12,15 +12,14 @@
 #include <stdio.h>
 #include "VAR.h"
 
-class POLI{
+class POLI{     //FORM: ax^e+bx+c
 public:
-    
     float a,b,c;
     int e;
     VAR* x;
     
-    POLI(){}
-    POLI(float a, int e) : a(a) {}
+    POLI(): a(0), b(0), c(0), e(1){}            //default Constructor
+    POLI(float a, int e) : a(a), e(e) {}        //make form of: x^e into POLI
     ~POLI(){}
     
 };
