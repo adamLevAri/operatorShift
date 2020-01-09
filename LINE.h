@@ -11,15 +11,14 @@
 
 #include "VAR.h"
 #include <stdio.h>
-class LINE{
+class LINE{     //FORM: ax+b
 public:
-    
     float a, b;
     VAR* x;
 
-    LINE(){}
-    LINE(int b) : a(0), x(0), b(b) {}
-    LINE(VAR& v) : a(1), x(&v), b(0) {}
+    LINE(): a(0), b(0){}                    //default Constructor
+    LINE(int b) : a(0), x(0), b(b) {}       //makes an int to Constructor
+    LINE(VAR& v) : a(1), x(&v), b(0) {}     //holds the x Final Resault into LINE
     ~LINE(){}
     
 };
