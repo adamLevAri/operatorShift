@@ -12,11 +12,11 @@
 #include <stdio.h>
 #include "VAR.h"
 
-class POLI{     //FORM: ax^e+bx+c
+class POLI{     
 public:
-    float a,b,c;
-    int e;
-    VAR* x;
+    float a,b,c;        //FORM: ax^e+bx+c
+    int e;              //exponent of x
+    VAR* x;             //pointer to Final Resualt in VAR
     
     POLI(): a(0), b(0), c(0), e(1){}            //default Constructor
     POLI(float a, int e) : a(a), e(e) {}        //make form of: x^e into POLI
